@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahzaib Majeed & Afifa Maryam | Valima Reception Invitation</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        valima: {
+                            900: '#121824',
+                            800: '#1e2636',
+                            700: '#2a3548',
+                        },
+                        gold: {
+                            light: '#f3e5ab',
+                            DEFAULT: '#dfb762',
+                            dark: '#b89242',
+                            champagne: '#f8f5f0',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        script: ['"Great Vibes"', 'cursive'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #121824 0%, #1e2636 50%, #121824 100%);
+            color: #f8f5f0;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        .serif-font { font-family: 'Playfair Display', serif; }
+        .script-font { font-family: 'Great Vibes', cursive; }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f8f5f0 0%, #dfb762 50%, #f3e5ab 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(30, 38, 54, 0.75);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(223, 183, 98, 0.25);
+            box-shadow: 0 10px 30px 0 rgba(18, 24, 36, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(223, 183, 98, 0.6);
+            transform: translateY(-4px);
+        }
+        @keyframes floatSlow {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating-element { animation: floatSlow 5s ease-in-out infinite; }
+        .ripple {
+            position: absolute;
+            background: rgba(223, 183, 98, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: rippleEffect 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes rippleEffect {
+            to { transform: scale(4); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="selection:bg-gold selection:text-valima-900 pb-16" onclick="triggerRipple(event)">
+
+    <!-- Ambient Music Controller -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleAmbientMusic(); playChime();" id="audio-btn" class="glass-card text-gold p-3.5 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center border border-gold/50" title="Play Valima Melody">
+            <i id="audio-icon" class="fa-solid fa-music text-lg"></i>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-xl mx-auto px-4 pt-12 pb-16 space-y-8">
+        
+        <!-- Header / Greeting -->
+        <div class="text-center space-y-3 floating-element">
+            <span class="text-[11px] uppercase tracking-[0.35em] text-gold font-semibold px-4 py-1.5 rounded-full border border-gold/30 bg-valima-800/50">Valima Reception Invitation</span>
+            <h1 class="serif-font text-4xl sm:text-5xl font-bold gold-gradient pt-2">Shahzaib &amp; Afifa</h1>
+            <p class="text-gold-champagne/80 text-xs sm:text-sm font-light leading-relaxed max-w-md mx-auto pt-1">
+                Mr. &amp; Mrs. Majeed cordially invite you to grace the Valima reception celebration.
+            </p>
+        </div>
+
+        <!-- Valima Card -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl border-2 border-gold/40 relative overflow-hidden">
+            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-gold/5 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="text-center space-y-2 border-b border-gold/20 pb-5">
+                <i class="fa-solid fa-champagne-glasses text-gold text-2xl mb-1"></i>
+                <h2 class="serif-font text-2xl sm:text-3xl font-bold gold-gradient">Valima Reception</h2>
+                <p class="text-xs uppercase tracking-widest text-gold/70 font-medium">Shahzaib Majeed &amp; Afifa Maryam</p>
+            </div>
+
+            <div class="space-y-4 bg-valima-900/60 p-5 rounded-2xl border border-gold/20 text-center">
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest text-gold/70 block font-semibold">Date</span>
+                    <span class="text-lg sm:text-xl font-bold text-gold-champagne">31 October 2026</span>
+                </div>
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest text-gold/70 block font-semibold">Timing (Lunch)</span>
+                    <span class="text-xl sm:text-2xl font-black text-gold">12:00 PM - 4:00 PM</span>
+                </div>
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest text-gold/70 block font-semibold">Venue</span>
+                    <span class="text-base sm:text-lg font-bold text-gold-champagne">Nawab Farm House</span>
+                </div>
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest text-gold/70 block font-semibold">Inquiries / RSVP Contact</span>
+                    <span class="text-sm font-bold text-gold"><i class="fa-solid fa-phone mr-1.5"></i> 0308-4244253</span>
+                </div>
+            </div>
+
+            <!-- Direct Location Button -->
+            <button onclick="openGoogleMaps(); playChime();" class="w-full bg-gradient-to-r from-gold via-gold-light to-gold-dark hover:opacity-95 active:scale-95 text-valima-900 font-black py-4 rounded-2xl transition-all shadow-xl uppercase tracking-wider text-xs flex items-center justify-center gap-2">
+                <i class="fa-solid fa-location-dot text-sm"></i> Open Location in Google Maps
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center space-y-2 pt-4">
+            <p class="text-gold-champagne/50 text-[11px] uppercase tracking-widest">We await your gracious presence</p>
+            <p class="text-gold-champagne/30 text-[10px]">&copy; 2026 Valima Celebration</p>
+        </footer>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        let audioCtx = null;
+        let isMusicPlaying = false;
+        let musicInterval = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function playChime() {
+            try {
+                initAudio();
+                const now = audioCtx.currentTime;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(659.25, now);
+                osc.frequency.exponentialRampToValueAtTime(1318.51, now + 0.3);
+                
+                gain.gain.setValueAtTime(0.04, now);
+                gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.35);
+                
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(now);
+                osc.stop(now + 0.35);
+            } catch (e) {}
+        }
+
+        function triggerRipple(e) {
+            const target = e.target.closest('button, a');
+            if (!target) return;
+            const circle = document.createElement('span');
+            const diameter = Math.max(target.clientWidth, target.clientHeight);
+            const radius = diameter / 2;
+
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${e.clientX - target.getBoundingClientRect().left - radius}px`;
+            circle.style.top = `${e.clientY - target.getBoundingClientRect().top - radius}px`;
+            circle.classList.add('ripple');
+
+            const rippleChild = target.getElementsByClassName('ripple')[0];
+            if (rippleChild) rippleChild.remove();
+
+            target.style.position = 'relative';
+            target.style.overflow = 'hidden';
+            target.appendChild(circle);
+        }
+
+        function toggleAmbientMusic() {
+            initAudio();
+            const btnIcon = document.getElementById('audio-icon');
+
+            if (!isMusicPlaying) {
+                isMusicPlaying = true;
+                btnIcon.className = "fa-solid fa-volume-high text-lg";
+
+                const chords = [
+                    [261.63, 329.63, 392.00],
+                    [220.00, 261.63, 329.63],
+                    [174.61, 220.00, 261.63]
+                ];
+                let chordIndex = 0;
+
+                function playChordPad() {
+                    if (!isMusicPlaying) return;
+                    const chord = chords[chordIndex];
+                    chordIndex = (chordIndex + 1) % chords.length;
+
+                    chord.forEach((freq, idx) => {
+                        try {
+                            const osc = audioCtx.createOscillator();
+                            const gain = audioCtx.createGain();
+                            const filter = audioCtx.createBiquadFilter();
+
+                            osc.type = idx === 0 ? 'triangle' : 'sine';
+                            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+                            filter.type = 'lowpass';
+                            filter.frequency.setValueAtTime(400, audioCtx.currentTime);
+
+                            gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+                            gain.gain.linearRampToValueAtTime(0.012, audioCtx.currentTime + 1.5);
+                            gain.gain.linearRampToValueAtTime(0.001, audioCtx.currentTime + 5.5);
+
+                            osc.connect(filter);
+                            filter.connect(gain);
+                            gain.connect(audioCtx.destination);
+
+                            osc.start();
+                            osc.stop(audioCtx.currentTime + 5.8);
+                        } catch (e) {}
+                    });
+                }
+
+                playChordPad();
+                musicInterval = setInterval(playChordPad, 6000);
+
+            } else {
+                isMusicPlaying = false;
+                if (musicInterval) clearInterval(musicInterval);
+                btnIcon.className = "fa-solid fa-music text-lg";
+            }
+        }
+
+        function openGoogleMaps() {
+            window.open('https://www.google.com/maps/search/?api=1&query=Nawab+Farm+House+Lahore', '_blank');
+        }
+    </script>
+</body>
+</html>
